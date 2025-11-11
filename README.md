@@ -1,1 +1,10 @@
-Each need to create 1 sorting algorithm and upload the code by the end of this week.
+Inefficent Sorting algorithms: 
+  Insertion (Wilky)
+  Selection (Ian)
+  Bubble (Matt)
+
+Efficient Sorting algorithms:
+  Heap (Matt)
+  Shell (Ian)
+  ...(Wilky)
+  

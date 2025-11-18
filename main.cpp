@@ -91,7 +91,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "Selection Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_selection_output.txt";
+					ofilename = "lab5_Selection_output.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {

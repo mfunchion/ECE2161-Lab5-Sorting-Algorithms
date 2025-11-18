@@ -49,7 +49,7 @@ int main() {
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
-					Bubble_sort(wData, sz);
+					bubble_sort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer

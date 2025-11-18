@@ -2,6 +2,9 @@
 //By: Matthew Funchion, Alex Wilkinson, and Ian Murray
 //Header file for all functions
 
+#ifndef MYHEADERS_H_
+#define MYHEADERS_H_
+
 #include <string>
 #include <unistd.h>
 #define MAXSIZE	 2100000
@@ -15,10 +18,9 @@ int writefile(long data[], long size, string outfilename);
 void swap(long& x, long& y);
 
 //sorting algorithms
-void bubble_sort(long data[], int n)
+void bubble_sort(long data[], int n);
 
-#ifndef MYHEADERS_H_
-#define MYHEADERS_H_
+
 
 
 

@@ -2,9 +2,8 @@
 //By: Matthew Funchion
 //Bubble sort
 
-#include <iostream>
 #include "myheaders.h"
-
+#include <iostream>
 using namespace std;
 
 void bubble_sort(long data[], int n){

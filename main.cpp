@@ -136,11 +136,11 @@ int main() {
 			
 					break;
 					
-			case 5:
+			case 5: //Heap Sort
 				
 					break;
 					
-			case 6: 
+			case 6: //Shell Sort
 					
 					break;
 					

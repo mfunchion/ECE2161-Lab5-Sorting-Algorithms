@@ -17,8 +17,8 @@ void	printmenu() {
 			cout << "Please choose from the following menu:" << endl;
 			cout << "  1: Read input file" << endl;
 			cout << "  2: Sort using Bubble Sort" << endl;
-			cout << "  3: Sort using Insertion Sort" << endl;
-			cout << "  4: Sort using Selection Sort" << endl;
+			cout << "  3: Sort using Selection Sort" << endl;
+			cout << "  4: Sort using Insertion Sort" << endl;
 			cout << "  5: Sort using Heap Sort" << endl;
 			cout << "  6: Sort using Shell Sort" << endl;
 			cout << "  7: Sort using Counting Sort" << endl;

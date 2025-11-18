@@ -1,3 +1,7 @@
+//Lab 5
+//By: Ian Murray
+//Selection Sort
+
 #include "myheaders.h"
 #include <iostream>
 using namespace std;

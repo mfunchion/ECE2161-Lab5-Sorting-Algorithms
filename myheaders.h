@@ -20,5 +20,6 @@ void swap(long& x, long& y);
 //sorting algorithms
 void bubble_sort(long data[], int n);
 void selection_sort(long data[], int n);
+void shellSort(long data[], int n);
 
 #endif /* MYHEADERS_H_ */

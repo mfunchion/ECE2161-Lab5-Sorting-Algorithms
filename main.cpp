@@ -112,9 +112,6 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-
-					begin_time = clock();   // start cpu timer
-
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
 

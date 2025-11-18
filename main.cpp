@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <ctime>
-#include <myheaders.h>
+#include "myheaders.h"
 using namespace std;
 
 int main() {
@@ -34,19 +34,22 @@ int main() {
 						 return 0;
 					}
 					else cout << endl << "File size is: " << sz << endl;
+					
 
 					break;
 
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-
+					for(int i = 0; i < sz; i++){
+						wData[i] = data[i];
+					}
 
 					begin_time = clock();   // start cpu timer
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
-
+					Bubble_sort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer

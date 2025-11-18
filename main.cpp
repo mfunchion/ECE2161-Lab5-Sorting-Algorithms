@@ -55,7 +55,7 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "Bubble Sort ran for " << cpu_time_used << " secs.";
 
 					ofilename = "lab5_Bubble_Sort_output.txt";
 					writefile(wData, sz, ofilename);

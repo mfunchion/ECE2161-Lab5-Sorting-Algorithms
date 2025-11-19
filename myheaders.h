@@ -16,11 +16,12 @@ void printarray(long data[], long size);
 int readfile(string infilename, long data[]);
 int writefile(long data[], long size, string outfilename);
 void swap(long& x, long& y);
+void heap(long data[], int n, int i);
 
 //sorting algorithms
 void bubble_sort(long data[], int n);
 void selection_sort(long data[], int n);
 void shellSort(long data[], int n);
-void heap(long data[], int n, int i);
+void heap_sort(long data[], int n)
 
 #endif /* MYHEADERS_H_ */

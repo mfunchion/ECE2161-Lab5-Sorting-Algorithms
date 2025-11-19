@@ -22,6 +22,6 @@ void heap(long data[], int n, int i);
 void bubble_sort(long data[], int n);
 void selection_sort(long data[], int n);
 void shellSort(long data[], int n);
-void heap_sort(long data[], int n)
+void heap_sort(long data[], int n);
 
 #endif /* MYHEADERS_H_ */

@@ -47,8 +47,8 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function A here to sort the array 'wData''
-			        //  Note that 'wData' is of size 'sz' (see case 1).
+					
+			        //call bubble sort
 					bubble_sort(wData, sz);
 
 
@@ -81,8 +81,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function B here to sort the array 'wData'
-			        //  Note that 'wDdata' is of size 'sz' (see case 1).
+					//call selection sort
 					selection_sort(wData, sz);
 
 
@@ -142,8 +141,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function A here to sort the array 'wData''
-					//  Note that 'wData' is of size 'sz' (see case 1).
+					//call heap sort
 					heap_sort(wData, sz);
 
 
@@ -173,8 +171,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function A here to sort the array 'wData''
-					//  Note that 'wData' is of size 'sz' (see case 1).
+					//call shell sort
 					shellSort(wData, sz);
 
 					end_time = clock();		// end cpu timer

@@ -114,6 +114,7 @@ void	swap(long& x, long& y) {
 			return;
 }
 
+//function to create a heap for the heap sort
 void heap(long data[], int n, int i){
 	int largest = i;
 	int left = 2 * i + 1;

@@ -24,5 +24,6 @@ void selection_sort(long data[], int n);
 void shellSort(long data[], int n);
 void heap_sort(long data[], int n);
 void insertionalg(long data[], int n);
+void countingalg(long data[], long n);
 
 #endif /* MYHEADERS_H_ */

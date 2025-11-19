@@ -25,7 +25,7 @@ int main() {
                     // The function 'readfile' returns the size of the file that was read
 					// If the file could not be read, 'readfile' returns -1
 
-					ifilename = "lab5_input.txt";
+					ifilename = "lab5_input_test.txt";
 					sz = readfile(ifilename, data);
 
 					if (sz < 0)	 {
@@ -113,14 +113,14 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-					void insertionalg(wData, sz);
+					insertionalg(wData, sz);
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "Insertion Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_inerstion_output.txt";
+					ofilename = "lab5_Inerstion_output.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -202,7 +202,7 @@ int main() {
 
 					// Call your Sort function A here to sort the array 'wData''
 					//  Note that 'wData' is of size 'sz' (see case 1).
-
+					countingalg(wData, sz);
 
 					end_time = clock();		// end cpu timer
 
@@ -221,7 +221,6 @@ int main() {
 
 					break;
 
-			// Write the other cases 4 - 7 here
 
 			case 0: // Exit Program
 

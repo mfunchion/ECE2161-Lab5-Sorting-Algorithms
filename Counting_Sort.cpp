@@ -12,7 +12,7 @@
 using namespace std;
 
 //the counting method
-void countingalg(long data[], long n){
+void countingalg(long data[], int n){
 	long i;
 	long lgnum = data[0];
 	long* tmp = new long[n];

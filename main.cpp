@@ -113,7 +113,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 					//  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					void insertionalg(wData, sz);
 
 					end_time = clock();		// end cpu timer
 

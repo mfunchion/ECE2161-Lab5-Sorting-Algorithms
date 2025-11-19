@@ -1,45 +1,51 @@
-//Alex Wilkinson
-//ECE 2161 Lab #5
-//Sort algorithm #2
-
-//This sorts it using the counting method
-//it counts the number of times each number appears
-//adds to a new array by smallest to largest
-//adds the number of times each number appears in original list
+// Alex Wilkinson
+// ECE 2161 Lab #5
+// Sort algorithm #2 - Counting Sort revised 2.0
 
 #include <iostream>
-#include "myheaders.h"
 using namespace std;
 
-//the counting method
-void countingalg(long data[], int n){
-	long i;
-	long lgnum = data[0];
-	long* tmp = new long[n];
+// Counting Sort implementation
+void countingalg(long data[], int n) {
+    long i;
+    long lgnum = data[0];
+    long smnum = data[0];
+    long* tmp = new long[n];
 
-	//fing largest number in array
-	for(i = 1; i < n; i++){
-		if(lgnum < data[i]){
-			lgnum = data[i];
-		}
-	}
+    // Find largest and smallest number in array
+    for (i = 1; i < n; i++) {
+        if (lgnum < data[i]) lgnum = data[i];
+        if (smnum > data[i]) smnum = data[i];
+    }
 
-	//create counting array
-	unsigned long * count = new unsigned long[lgnum +1];
+    long range = lgnum - smnum + 1;
 
-	for(i = 0; i <= lgnum; i++){
-		count[i] = 0;
-	}
+    // Create counting array
+    unsigned long* count = new unsigned long[range];
+    for (i = 0; i < range; i++) count[i] = 0;
 
-	//copy value
-	for(i = 0; i < n; i++){
-		data[i] = tmp[i];
-	}
+    // Count occurrences of each value
+    for (i = 0; i < n; i++) {
+        count[data[i] - smnum]++;
+    }
 
-	delete[]tmp;
-	delete[]count;
+    // Compute cumulative counts
+    for (i = 1; i < range; i++) {
+        count[i] += count[i - 1];
+    }
+
+    // Build the output array (stable sort)
+    for (i = n - 1; i >= 0; i--) {
+        tmp[count[data[i] - smnum] - 1] = data[i];
+        count[data[i] - smnum]--;
+    }
+
+    // Copy sorted values back into original array
+    for (i = 0; i < n; i++) {
+        data[i] = tmp[i];
+    }
+
+    // Free memory
+    delete[] tmp;
+    delete[] count;
 }
-
-
-
-

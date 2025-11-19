@@ -120,7 +120,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "Insertion Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_Inerstion_output.txt";
+					ofilename = "lab5_Insertion_output.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -209,7 +209,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "Counting Sort ran for " << cpu_time_used << " secs.";
 
-					ifilename = "lab5_Counting_output.txt";
+					ofilename = "lab5_Counting_output.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {

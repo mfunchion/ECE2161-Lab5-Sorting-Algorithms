@@ -34,10 +34,15 @@ void countingalg(long data[], int n) {
         count[i] += count[i - 1];
     }
 
+    long *tmp = new long[];
     // Build the output array (stable sort)
     for (int i = n - 1; i >= 0; i--) {
-        data[count[data[i] + offset] - 1] = data[i];
+        tmp[count[data[i] + offset] - 1] = data[i];
         count[data[i] + offset]--;
+    }
+
+    for(int i; i < n; i++){
+    	data[i] = tmp[i];
     }
 
     // Free memory

@@ -10,7 +10,6 @@ using namespace std;
 void countingalg(long data[], int n) {
     long lgnum = data[0];
     long smnum = data[0];
-    long* tmp = new long[n];
 
     // Find largest and smallest number in array
     for (int i = 1; i < n; i++) {
@@ -37,16 +36,10 @@ void countingalg(long data[], int n) {
 
     // Build the output array (stable sort)
     for (int i = n - 1; i >= 0; i--) {
-        tmp[count[data[i] - smnum] - 1] = data[i];
+        data[count[data[i] - smnum] - 1] = data[i];
         count[data[i] - smnum]--;
     }
 
-    // Copy sorted values back into original array
-    for (int i = 0; i < n; i++) {
-        data[i] = tmp[i];
-    }
-
     // Free memory
-    delete[] tmp;
     delete[] count;
 }

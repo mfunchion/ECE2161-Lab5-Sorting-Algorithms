@@ -25,7 +25,7 @@ int main() {
                     // The function 'readfile' returns the size of the file that was read
 					// If the file could not be read, 'readfile' returns -1
 
-					ifilename = "lab5_input.txt";
+					ifilename = "lab5_input_test.txt";
 					sz = readfile(ifilename, data);
 					
 					
@@ -193,11 +193,13 @@ int main() {
 					break;
 					
 			case 7: //Counting Sort
-				
 					// First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					for(int i = 0; i < sz; i++){
 						wData[i] = data[i];
 					}
+					
+					//remvoe the negative values from the array so that the algorithm runs
+					remove_negatives(wData, sz);
 
 					begin_time = clock();   // start cpu timer
 

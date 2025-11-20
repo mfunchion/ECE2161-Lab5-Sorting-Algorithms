@@ -17,6 +17,7 @@ int readfile(string infilename, long data[]);
 int writefile(long data[], long size, string outfilename);
 void swap(long& x, long& y);
 void heap(long data[], int n, int i);
+void remove_negatives(long data[], int n);
 
 //sorting algorithms
 void bubble_sort(long data[], int n);

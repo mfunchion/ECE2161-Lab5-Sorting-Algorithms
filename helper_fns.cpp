@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cmath>
 #include "myheaders.h"
 
 using namespace std;
@@ -131,6 +132,12 @@ void heap(long data[], int n, int i){
 	if(largest != i){
 		swap(data[i], data[largest]);
 		heap(data, n, largest);
+	}
+}
+
+void remove_negatives(long data[], int n){
+	for(int i = 0; i < n; i++){
+		data[i] = abs(data[i]);
 	}
 }
 

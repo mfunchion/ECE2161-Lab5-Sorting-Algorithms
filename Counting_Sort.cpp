@@ -18,11 +18,12 @@ void countingalg(long data[], int n) {
     }
 
 
-    long range = lgnum - smnum + 1;
+    unsigned long range = lgnum - smnum + 1;
 
-    long offset = -smnum;
+    unsigned long offset = -smnum;
+
     // Create counting array
-    unsigned long* count = new unsigned long[range]();
+    unsigned int* count = new unsigned int[range];
 
     // Count occurrences of each value
     for (int i = 0; i < n; i++) {
@@ -30,7 +31,7 @@ void countingalg(long data[], int n) {
     }
 
     // Compute cumulative counts
-    for (int i = 1; i < range; i++) {
+    for (unsigned long i = 1; i < range; i++) {
         count[i] += count[i - 1];
     }
 
@@ -41,10 +42,11 @@ void countingalg(long data[], int n) {
         count[data[i] + offset]--;
     }
 
-    for(int i; i < n; i++){
+    for(int i = 0; i < n; i++){
     	data[i] = tmp[i];
     }
 
     // Free memory
     delete[] count;
+    delete[] tmp;
 }

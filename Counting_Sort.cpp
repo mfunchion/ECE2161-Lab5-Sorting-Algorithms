@@ -17,6 +17,7 @@ void countingalg(long data[], int n) {
         if (smnum > data[i]) smnum = data[i];
     }
 
+
     long range = lgnum - smnum + 1;
 
     long offset = -smnum;

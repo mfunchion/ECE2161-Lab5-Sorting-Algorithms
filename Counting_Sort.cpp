@@ -34,7 +34,7 @@ void countingalg(long data[], int n) {
         count[i] += count[i - 1];
     }
 
-    long *tmp = new long[];
+    long *tmp = new long[n];
     // Build the output array (stable sort)
     for (int i = n - 1; i >= 0; i--) {
         tmp[count[data[i] + offset] - 1] = data[i];

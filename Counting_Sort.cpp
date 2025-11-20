@@ -19,14 +19,13 @@ void countingalg(long data[], int n) {
 
     long range = lgnum - smnum + 1;
 
+    long offset = -smnum;
     // Create counting array
-    unsigned long* count = new unsigned long[range];
-    for (int i = 0; i < range; i++){
-    	count[i] = 0;
-    }
+    unsigned long* count = new unsigned long[range]();
+
     // Count occurrences of each value
     for (int i = 0; i < n; i++) {
-        count[data[i] - smnum]++;
+        count[data[i] + offset]++;
     }
 
     // Compute cumulative counts
@@ -36,8 +35,8 @@ void countingalg(long data[], int n) {
 
     // Build the output array (stable sort)
     for (int i = n - 1; i >= 0; i--) {
-        data[count[data[i] - smnum] - 1] = data[i];
-        count[data[i] - smnum]--;
+        data[count[data[i] + offset] - 1] = data[i];
+        count[data[i] + offset]--;
     }
 
     // Free memory

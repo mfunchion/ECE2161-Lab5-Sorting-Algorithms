@@ -29,7 +29,6 @@ int main() {
 					sz = readfile(ifilename, data);
 					
 					
-					
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Input File Not Found or File cannot be opened." <<endl;
 						 cerr << "       Please check that the file exists, its path, and try again!" << endl << endl;

@@ -199,6 +199,7 @@ int main() {
 					}
 					
 					//remvoe the negative values from the array so that the algorithm runs
+					//will not run with negative values
 					remove_negatives(wData, sz);
 
 					begin_time = clock();   // start cpu timer
